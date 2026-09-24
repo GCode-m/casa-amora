@@ -1,5 +1,5 @@
 import { MapPin, Star } from "lucide-react";
-import { mesaCafeManha } from "./flavor-images";
+import { mesaCafeManha } from "./flavor-images"; 
 import { MAPS_DIRECTIONS } from "@/lib/constants";
 
 export function Stars({ className = "" }: { className?: string }) {

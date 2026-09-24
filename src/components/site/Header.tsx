@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu as MenuIcon, X } from "lucide-react";
-import { Logo, NAV_LINKS } from "./nav-links";
+import { Logo } from "./Logo";
+import { NAV_LINKS } from "./nav-links";
 
 export function Header() {
   const [open, setOpen] = useState(false);

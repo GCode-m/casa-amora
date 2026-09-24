@@ -30,7 +30,7 @@ export function Location() {
               <p className="mt-1 text-sm text-muted-foreground">
                 {SITE.address}
                 <br />
-                {SITE.city} · {SITE.fullAddress.split(", ")[2] ?? "25260-330"}
+                {SITE.city} · 25260-330
               </p>
             </div>
           </div>

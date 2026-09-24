@@ -57,7 +57,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-creme/10">
-        <p className="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-crete/60 sm:px-6">
+        <p className="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-creme/60 sm:px-6">
           © {new Date().getFullYear()} Casa Amora · {SITE.neighborhood},{" "}
           {SITE.city}
         </p>

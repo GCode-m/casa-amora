@@ -1,4 +1,4 @@
-import salaoAsset from "@/assets/salao-interior.jpg.asset.json";
+import salaoAsset from "@/assets/salao-interior.jpg";
 import { SITE } from "@/lib/constants";
 
 export function About() {

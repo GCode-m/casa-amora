@@ -1,24 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Highlights } from "@/components/site/Highlights";
+import { Flavors } from "@/components/site/Flavors";
+import { Menu } from "@/components/site/Menu";
+import { Gallery } from "@/components/site/Gallery";
+import { About } from "@/components/site/About";
+import { Reviews } from "@/components/site/Reviews";
+import { Location } from "@/components/site/Location";
+import { FinalCta } from "@/components/site/FinalCta";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Casa Amora — Cafeteria & Confeitaria em Duque de Caxias" },
+      {
+        name: "description",
+        content:
+          "Cafés, bolos, doces e lanches em um ambiente aconchegante no Parque Equitativa, Duque de Caxias - RJ. Venha viver um momento especial na Casa Amora.",
+      },
+      { property: "og:title", content: "Casa Amora — Cafeteria & Confeitaria" },
+      {
+        property: "og:description",
+        content:
+          "Seu momento de pausa começa aqui. Cafés, bolos, doces e lanches no Parque Equitativa, Duque de Caxias - RJ.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background font-sans text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <Highlights />
+        <Flavors />
+        <Menu />
+        <Gallery />
+        <About />
+        <Reviews />
+        <Location />
+        <FinalCta />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }

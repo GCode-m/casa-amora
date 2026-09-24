@@ -4,11 +4,11 @@ import cupcakeAsset from "@/assets/cupcake-decorado.jpg";
 import paniniAsset from "@/assets/panini-carne.jpg";
 import teaAsset from "@/assets/tea.jpg";
 import tortinhaAsset from "@/assets/tortinha-amora.jpg";
-import mesaAsset from "@/assets/mesa-cafe-manha.jpg.asset.json";
-import sodasAsset from "@/assets/sodas-amora.jpg.asset.json";
+import mesaAsset from "@/assets/mesa-cafe-manha.jpg";
+import sodasAsset from "@/assets/sodas-amora.jpg";
 
-export const mesaCafeManha = mesaAsset;
-export const sodaAmora = sodasAsset;
+export const mesaCafeManha = { url: mesaAsset };
+export const sodaAmora = { url: sodasAsset };
 export const capuccino = { url: capuccinoAsset };
 export const tortinhaAmora = { url: tortinhaAsset };
 export const cupcakeDecorado = { url: cupcakeAsset };

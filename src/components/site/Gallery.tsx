@@ -1,27 +1,31 @@
-import interiorAsset from "@/assets/interior-amora.jpg.asset.json";
-import fachadaAsset from "@/assets/fachada-noite.jpg.asset.json";
-import bebidaAsset from "@/assets/bebida-amora-pao-queijo.jpg.asset.json";
-import sodasAsset from "@/assets/sodas-amora.jpg.asset.json";
+import interiorAsset from "@/assets/interior-amora.jpg";
+import fachadaAsset from "@/assets/fachada-noite.jpg";
+import bebidaAsset from "@/assets/bebida-amora-pao-queijo.jpg";
+import sodasAsset from "@/assets/sodas-amora.jpg";
 import cupcakeAsset from "@/assets/cupcake-decorado.jpg";
 
 type Photo = { src: { url: string }; alt: string };
 
 const interior: Photo = {
-  src: interiorAsset,
+  src: { url: interiorAsset },
   alt: "Salão da Casa Amora com o logo na parede",
 };
+
 const fachada: Photo = {
-  src: fachadaAsset,
+  src: { url: fachadaAsset },
   alt: "Área externa da Casa Amora à noite, com luzes e guarda-sóis",
 };
+
 const bebida: Photo = {
-  src: bebidaAsset,
+  src: { url: bebidaAsset },
   alt: "Bebida de amora e pão de queijo servidos na mesa",
 };
+
 const sodas: Photo = {
-  src: sodasAsset,
+  src: { url: sodasAsset },
   alt: "Sodas italianas de amora na mesa da Casa Amora",
 };
+
 const cupcake: Photo = {
   src: { url: cupcakeAsset },
   alt: "Cupcakes decorados da Casa Amora",
@@ -36,10 +40,14 @@ export function Gallery() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
           Galeria
         </p>
+
         <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">
           Um lugar para saborear bons momentos.
         </h2>
-        <p className="mt-4 text-muted-foreground">Venha conhecer a Casa Amora.</p>
+
+        <p className="mt-4 text-muted-foreground">
+          Venha conhecer a Casa Amora.
+        </p>
       </div>
 
       <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
@@ -51,6 +59,7 @@ export function Gallery() {
             className="h-64 w-full object-cover md:h-full md:min-h-[32rem]"
           />
         </div>
+
         {STACKED.map((photo, idx) => (
           <div
             key={photo.alt}

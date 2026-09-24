@@ -52,7 +52,7 @@ export function About() {
           <div className="absolute -right-6 -top-6 size-32 rounded-full bg-sage/25 blur-2xl" />
           <div className="relative overflow-hidden rounded-4xl border border-border shadow-soft">
             <img
-              src={salaoAsset.url}
+              src={salaoAsset}
               alt="Salão da Casa Amora com mesas de madeira e cestos de palha no teto"
               loading="lazy"
               className="h-[380px] w-full object-cover sm:h-[460px]"

@@ -1,5 +1,4 @@
 import { Flower2 } from "lucide-react";
-import { SITE } from "@/lib/constants";
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
@@ -17,17 +16,3 @@ export function Logo({ light = false }: { light?: boolean }) {
     </a>
   );
 }
-
-export const NAV_LINKS = [
-  { href: "#inicio", label: "Início" },
-  { href: "#cardapio", label: "Cardápio" },
-  { href: "#sobre", label: "Sobre nós" },
-  { href: "#avaliacoes", label: "Avaliações" },
-  { href: "#localizacao", label: "Localização" },
-];
-
-export function Header() {
-  return null;
-}
-
-export { SITE };

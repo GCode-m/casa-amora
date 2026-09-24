@@ -44,7 +44,7 @@ export function Flavors() {
             className="group overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-transform duration-300 hover:-translate-y-1"
           >
             <img
-              src={IMAGES[i].url}
+              src={IMAGES[i]!.url}
               alt={card.title}
               width={512}
               height={512}

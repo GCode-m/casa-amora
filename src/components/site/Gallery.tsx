@@ -4,13 +4,30 @@ import bebidaAsset from "@/assets/bebida-amora-pao-queijo.jpg.asset.json";
 import sodasAsset from "@/assets/sodas-amora.jpg.asset.json";
 import cupcakeAsset from "@/assets/cupcake-decorado.jpg";
 
-const PHOTOS = [
-  { src: interiorAsset, alt: "Salão da Casa Amora com o logo na parede" },
-  { src: fachadaAsset, alt: "Área externa da Casa Amora à noite, com luzes e guarda-sóis" },
-  { src: bebidaAsset, alt: "Bebida de amora e pão de queijo servidos na mesa" },
-  { src: sodasAsset, alt: "Sodas italianas de amora na mesa da Casa Amora" },
-  { src: { url: cupcakeAsset }, alt: "Cupcakes decorados da Casa Amora" },
-];
+type Photo = { src: { url: string }; alt: string };
+
+const interior: Photo = {
+  src: interiorAsset,
+  alt: "Salão da Casa Amora com o logo na parede",
+};
+const fachada: Photo = {
+  src: fachadaAsset,
+  alt: "Área externa da Casa Amora à noite, com luzes e guarda-sóis",
+};
+const bebida: Photo = {
+  src: bebidaAsset,
+  alt: "Bebida de amora e pão de queijo servidos na mesa",
+};
+const sodas: Photo = {
+  src: sodasAsset,
+  alt: "Sodas italianas de amora na mesa da Casa Amora",
+};
+const cupcake: Photo = {
+  src: { url: cupcakeAsset },
+  alt: "Cupcakes decorados da Casa Amora",
+};
+
+const STACKED = [fachada, bebida, sodas, cupcake];
 
 export function Gallery() {
   return (
@@ -28,22 +45,22 @@ export function Gallery() {
       <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
         <div className="col-span-2 row-span-2 overflow-hidden rounded-3xl border border-border shadow-card">
           <img
-            src={PHOTOS[0].src.url}
-            alt={PHOTOS[0].alt}
+            src={interior.src.url}
+            alt={interior.alt}
             loading="lazy"
             className="h-64 w-full object-cover md:h-full md:min-h-[32rem]"
           />
         </div>
-        {[1, 2, 3, 4].map((i, idx) => (
+        {STACKED.map((photo, idx) => (
           <div
-            key={i}
+            key={photo.alt}
             className={`overflow-hidden rounded-3xl border border-border shadow-card ${
               idx === 3 ? "col-span-2 md:col-span-2" : ""
             }`}
           >
             <img
-              src={PHOTOS[i].src.url}
-              alt={PHOTOS[i].alt}
+              src={photo.src.url}
+              alt={photo.alt}
               loading="lazy"
               className="h-40 w-full object-cover md:h-56"
             />

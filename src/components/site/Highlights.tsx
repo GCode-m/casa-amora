@@ -8,7 +8,7 @@ export function Highlights() {
     <section className="border-y border-border bg-card">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 md:py-14">
         {HIGHLIGHTS.map((item, i) => {
-          const Icon = ICONS[i];
+          const Icon = ICONS[i] ?? Coffee;
           return (
             <div key={item.title}>
               <span className="grid size-11 place-items-center rounded-full bg-secondary text-primary">

@@ -2,6 +2,8 @@ import interiorAsset from "@/assets/interior-amora.jpg";
 import fachadaAsset from "@/assets/fachada-noite.jpg";
 import bebidaAsset from "@/assets/bebida-amora-pao-queijo.jpg";
 import sodasAsset from "@/assets/sodas-amora.jpg";
+import cupcakeAsset from "@/assets/cupcake-decorado.jpg";
+
 type Photo = { src: { url: string }; alt: string };
 
 const interior: Photo = {

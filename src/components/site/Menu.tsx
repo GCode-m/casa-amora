@@ -1,6 +1,6 @@
 import { CakeSlice, Coffee, Croissant, CupSoda, Sandwich } from "lucide-react";
-import cardapio2Asset from "@/assets/cardapio-pagina2.webp.asset.json";
-import cardapio3Asset from "@/assets/cardapio-pagina3.webp.asset.json";
+import cardapio2Asset from "@/assets/cardapio-pagina2.webp";
+import cardapio3Asset from "@/assets/cardapio-pagina3.webp";
 import { MENU } from "@/data/menu";
 
 const CATEGORY_ICONS: Record<string, typeof Coffee> = {
